@@ -83,24 +83,7 @@
 				$('telefone').mask('(00) 0000-0000');
 				$('whatsapp').mask('(00) 00000-0000');
 			});
-</script>
-<script type="text/javascript">
-    function validarEmail(email) {
-        // Expressão regular para validar o formato do e-mail
-        var re = /\S+@\S+\.\S+/;
-        return re.test(email);
-    }
 
-    $(document).ready(function() {
-        // Validar o e-mail quando o formulário for enviado
-        $("form").submit(function() {
-            var email = $("#email").val();
-            if (!validarEmail(email)) {
-                alert("Por favor, insira um e-mail válido.");
-                return false; // Impede o envio do formulário se o e-mail for inválido
-            }
-        });
-    });
 </script>
 <!-- <script>
     function validate() {
