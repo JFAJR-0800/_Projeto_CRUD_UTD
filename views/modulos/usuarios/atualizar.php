@@ -71,7 +71,7 @@ $senhaCriptografada = password_hash($senha, PASSWORD_DEFAULT);
         </div>
     </div>
 </div>
-<script>
+<!-- <script>
     function validate() {
         var size = 220715; //220.xx kb
         var file_size = document.getElementById('file_upload').files[0].size;
@@ -89,4 +89,4 @@ $senhaCriptografada = password_hash($senha, PASSWORD_DEFAULT);
         //     return false;
         // }
     }
-</script>
+</script> -->

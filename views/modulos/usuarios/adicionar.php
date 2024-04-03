@@ -14,6 +14,13 @@
             <!-- Conteúdo real da página -->
             <form action="<?=Config::urlBase();?>/controllers/Usuarios.php" method="POST" class="form-horizontal mt-4" enctype="multipart/form-data">
                 <div class="row">
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label"><span class="iconify" data-icon="fa6-solid:image" style="color: #198754;"></span> Foto de Perfil </label>
+                            <input id="file_upload" name="file" type="file" class="form-control" id="exampleFormControlInput1" placeholder1="Nome do Produto" accept="image/*" onblur="validate();">
+                        </div>
+                    </div>
                     <div class="col-md-6 mb-3">
                         <div class="mb-3">
                             <label for="nome" class="form-label"><span class="iconify" data-icon="wpf:" style="color: #198754;"></span> Nome do Usuário</label>
@@ -48,15 +55,10 @@
                                 <option value="client">Cliente</option>
                                 <option value="func">Funcionário</option>
                             </select>
-                    </div>
-                    <div class="col-6">
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label"><span class="iconify" data-icon="fa6-solid:image" style="color: #198754;"></span> Foto de Perfil </label>
-                            <input id="file_upload" name="file" type="file" class="form-control" id="exampleFormControlInput1" placeholder1="Nome do Produto" accept="image/*" onblur="validate();">
-                        </div>
-                    </div>
+
                         <input type="hidden" value="insert" name="action"> 
                         <input type="hidden" value="" name="isDeleted">
+                        
                     <div class="col-12 mt-3">
                         <p class="text-end">
                         <button class="btn btn-outline-success" type="submit">
@@ -70,15 +72,6 @@
         </div>
     </div>
 </div>
-<script type="text/javascript">
-			$(document).ready(function(){
-				$('.cpf').mask('000.000.000-00', {reverse: true});
-				$('.cep').mask('00000-000');
-				$('.telefone').mask('(00) 0000-0000');
-				$('.whatsapp').mask('(00) 00000-0000');
-			});
-</script>
-
 <script>
     function validate() {
         var size = 220715; //200.xx kb
